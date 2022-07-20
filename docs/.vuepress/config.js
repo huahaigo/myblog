@@ -1,38 +1,41 @@
 module.exports = {
-  title: "lhs的个人博客", //标题
+  title: "花花的个人博客",
   keywords: "前端开发",
-  description: "前端开发 lhs的个人博客",
-  repo: "https://github.com/zeroonbush/blog.git", //仓库地址
-  base: "/blog/", // 配合部署项目
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
-  lastUpdated: "Last Updated",
+  description: "花花的个人博客",
+  //   theme: "reco",
+  locales: {
+    "/": {
+      lang: "zh-CN",
+    },
+  },
+  base: "/myblog/",
+
   themeConfig: {
-    //主题配置
-    logo: "/img/logo.png",
+    subSidebar: "auto",
+    logo: "/image/logo.png",
+    authorAvatar: "/image/avatar.jpg",
     nav: [
-      //导航栏
       { text: "首页", link: "/" },
-      { text: "JS", link: "/js_docs/" },
-      { text: "CSS", link: "/css_docs/" },
-      { text: "Vue", link: "/vue_docs/" },
-      { text: "React", link: "/react_docs/" },
       {
-        text: "2020",
-        ariLabel: "2020",
-        items: [
-          //多级导航栏
-          { text: "May", link: "/2020/5/" },
-          { text: "June", link: "/2020/6/" },
-        ],
+        text: "TypeScript",
+        link: "/TypeScript_docs/基础类型",
       },
-      { text: "github", link: "https://github.com/zeroonbush/blog.git" },
+      {
+        text: "Vue3",
+        link: "/Vue3_docs/Vue3.2",
+      },
+      { text: "React", link: "" },
+      { text: "Dart", link: "" },
+      { text: "Flutter", link: "" },
+      { text: "随心记录", link: "" },
+      {
+        text: "Github",
+        link: "https://github.com/huahaigo/LearningPark",
+      },
     ],
     sidebar: {
-      //侧边拦
-      "/2020/": [
-        ["/2020/5/", "5月份"],
-        ["/2020/6/", "6月份"],
-      ],
+      "/TypeScript_docs/": ["基础类型", "接口", "类", "函数", "泛型"],
+      "/Vue3_docs/": ["Vue3.2", "Pinia"],
     },
   },
 };
